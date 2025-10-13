@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+</head>
+<body>
+    <script>
+
+        /* create fisrt object */
+        var contact1 = {
+            name : "Ramesh",
+            phone : 6285694571,
+            email : "ramesh@gmail.com",
+        
+        /* method to return contact to a string */
+        getInfo: function() {
+            return "Name : " + this.name + ", Phone: " + this.phone +", Email: " + this.email;
+        }
+    };
+
+    /* function to print contact */
+    function printContactInfo(contact) {
+        console.log(contact.getInfo());
+    }
+
+
+    /* create second object */
+        var contact2 = {
+            name : "Sumesh",
+            phone : 6285694451,
+            email : "sumesh@gmail.com",
+        
+
+        /* method to return contact to a string */
+        getInfo: function() {
+            return "Name : " + this.name + ", Phone: " + this.phone +", Email: " + this.email;
+        }
+    };
+
+
+    /* function to print contact */
+    function printContactInfo(contact) {
+        console.log(contact.getInfo());
+    }
+
+    /* display contact in concole method */
+    printContactInfo(contact1);
+    printContactInfo(contact2);
+    </script>
+</body>
+</html>

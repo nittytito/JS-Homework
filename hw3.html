@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile</h1>
+    <p id="username"></p>
+    <p id="bio"></p>
+    <p id="length"></p>
+    <script>
+
+        /* create object */
+        var Profile = {
+            username : "CoolUser99",
+            bio : "I LOVE Coding! JavaScript is Great!!!",
+        };
+
+        /* function */
+        function cleanUserBio(profile) {
+
+            /* trim and lowercase the username */
+            var username = profile.username.trim().toLowerCase();
+
+            /* trim and lowercase the bio */
+            var bio = profile.bio.trim().toLowerCase();
+
+            /* replace the 'javascript' with 'js' */
+            bio = bio.replace(/javascript/g, "JS");
+
+            /* length bio */
+            var length = bio.length;
+
+            /* display result */
+            document.getElementById("username").innerHTML = "Username : " + username;
+            document.getElementById("bio").innerHTML ="Bio : " + bio;
+            document.getElementById("length").innerHTML = "Length : " + length;
+
+            /* return profile object */
+            return {
+                Username : username,
+                Bio : bio,
+                Length : length,
+            };
+        }
+
+        /* call function and store result */
+        var Result = cleanUserBio(Profile);
+        console.log(Result);
+    </script>
+</body>
+</html>
