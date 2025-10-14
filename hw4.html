@@ -20,42 +20,37 @@
 
     <script>
 
-        /* generate a random number between 1 and 50 */
+        
         var randomly = Math.floor(Math.random() * 50)+1;
         document.getElementById("randomly").innerHTML = randomly ;
 
-        /* user socre asa string and convert string score to number  disply it */
+        
         var score = "45";
         var numberscore = Number(score);
         document.getElementById("score").innerHTML = "Score : " + numberscore;
 
 
-        /* calculate absolute differnece between randomly and numberscore */
         var difference = Math.abs(randomly - numberscore);
         document.getElementById("difference").innerHTML = "Difference = " + difference;
 
 
-        /* calculate square root of user score */
         var squareroot = Math.round(Math.sqrt(numberscore));
         document.getElementById("squareroot").innerHTML = "Square Root = " + squareroot
 
 
-        /* display value of PI */
+        
         var pivalue = Math.PI;
         document.getElementById("Pi").innerHTML = "Constant = " +  pivalue;
 
 
-        /* multiply string 20 by 5 */
         var result = "20" * 5;
         document.getElementById("result").innerHTML = "Result = " + result;
 
 
-        /* find maximum value among 10,20 and randomly number and display it*/
         var maxvalue = Math.max(10,20,randomly);
         document.getElementById("max").innerHTML = "Max Value = " + maxvalue;
 
 
-        /* find minimum value among 10,20 and randomly number  display it*/
         var minvalue = Math.min(10,20,randomly);
         document.getElementById("min").innerHTML = "Min Value = " + minvalue;
     </script>

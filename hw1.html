@@ -8,47 +8,36 @@
 <body>
     <script>
 
-        /* item declaration */
         var rice = "Rice";
         var sugar = "Sugar";
         var wheat = "Wheat";
 
-        /* price of each item */
         var riceprice = 50;
         var sugarprice = 40;
         var wheatprice = 50;
 
-        /* quantityof each items */
         var riceqty = 2;
         var sugarqty = 2;
         var wheatqty = 1;
 
-        /* calculate cost for each items */
         var cost_of_rice = riceprice * riceqty;
         var cost_of_sugar = sugarprice * sugarqty;
         var cost_of_wheat = wheatprice * wheatqty;
         
-        /* display cost in console method */
         console.log( rice + "Cost = " + cost_of_rice);
         console.log( sugar + "Cost = " + cost_of_sugar);
         console.log( wheat + "Cost = " + cost_of_wheat);
 
-        /* calculate total bill */
         var total_bill = cost_of_rice + cost_of_sugar + cost_of_wheat;
 
-        /* display total bill in console method */
         console.log("Total Bill = " + total_bill);
 
-        /* upadte rice quantity */
         riceqty = 3;
 
-        /* update rice cost */
         cost_of_rice = riceprice * riceqty;
 
-        /* update total bill */
         var update_total_bill = cost_of_rice + cost_of_sugar + cost_of_wheat;
 
-        /* display update bill in console method */
         console.log ("Update Total Bill = " + update_total_bill );
     </script>
 </body>

@@ -9,7 +9,7 @@
     
     <h1>Profile Page</h1>
 
-    <!-- button to click admin access -->
+    
     <button onclick="check()">Admin Access</button>
     <p id="checkresult"></p>
     <p id="checkage"></p>
@@ -17,26 +17,26 @@
 
     <script>
 
-        /* create user object */
+       
         var user = {
             name: "nitty",
             age: 23,
             isAdmin : true ,
         };
 
-        /* function to check admin access */
+       
         function check(){
 
-            /* check if user is 18 or older and is an admin */
+           
             var msg = (user.age >=18 && user.isAdmin ) ? "Access Granted" : " Access Denied";
 
             document.getElementById("checkresult").innerHTML = msg;
 
-            /* check if age property exists in the user */
+            
             var ageexists = "age" in user? "Age Property Exists" :  "Age Property Missing";
             document.getElementById("checkage").innerHTML = ageexists;
 
-            /* delete the age and disply update profile */
+          
             delete user.age;
             document.getElementById("update").innerHTML = "Updated User: name = " + user.name + ", isAdmin = " + user.isAdmin;
 
