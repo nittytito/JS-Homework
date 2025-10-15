@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+<body>
+    <h1>Students Dashboard</h1>
+    <p id="names"></p>
+    <p id="morethan"></p>
+    <p id="totalscore"></p>
+    <p id="pass"></p>
+    <p id="leastone"></p>
+    <p id="sort"></p>
+   
+    <script>
+        var students=[
+            {name:"Nitty", score : 85},
+            {name:"Riya", score : 55},
+            {name:"Miya", score : 95},
+        ];
+        var names = students.map(students=>students.name);
+        document.getElementById("names").innerHTML = "Students Names  <br><br>" + names.join("<br> <br>");
+
+        var morethan = students.filter(students=>students.score>60).map(students=>students.name);
+        document.getElementById("morethan").innerHTML = "Students who score more than 60 : <br><br>" + morethan.join("<br><br>");
+
+        var totalscore = students.reduce((total,students)=>total+students.score,0);
+        document.getElementById("totalscore").innerHTML = "Total Score for all Students =  " + totalscore;
+
+        var pass = students.every(students=>students.score>35);
+        document.getElementById("pass").innerHTML = "Did all students pass? : " + pass;
+
+        var leastone = students.some(students=>students.score>90);
+        document.getElementById("leastone").innerHTML = "Any Student Scored more than 90 : " + leastone;
+
+        var sort = students.sort((a,b)=>b.score - a.score).map(students=> students.name + " " + students.score );
+        document.getElementById("sort").innerHTML = "Sorted : " + sort;
+    </script>
+</body>
+</html>
