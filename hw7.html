@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remainder</title>
+</head>
+<body>
+
+    <h1>Remainder Tool</h1>
+
+    Enter a past date:  
+    <input type="date" id="past"><br><br>
+    <button onclick="check()">Check Date</button>
+    <p id="remainder"></p>
+    <script>
+
+        function check() {
+        var pastdate = document.getElementById("past").value;
+
+        var date = new Date(pastdate);
+
+        var year = date.getFullYear();
+
+        var month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        var monthname = month[date.getMonth()];
+
+        var day = date.getDate();
+
+        var newday = new Date();
+        var years = newday.getFullYear() - year;
+
+        if (newday.getMonth() < date.getMonth() || (newday.getMonth() === date.getMonth() && newday.getDate() < date.getDate())) {
+            years;
+        } 
+
+        var msg ;
+        if(years >= 1){
+            msg = "It has been more than a year since that date.";
+        }
+        else{
+            msg = "It has been less than a year since that date";
+        }        
+        document.getElementById("remainder").innerHTML ="Date: " + day + " " + monthname + ", " + year + "<br>" +"Full years passed: " + years + "<br>" + msg;
+    }
+    </script>
+</body>
+</html>
