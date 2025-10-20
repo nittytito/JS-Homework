@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <h1>Number Game</h1>
+    <script>
+        var chance=0;
+        while(chance<5) {
+            var num = parseInt(prompt("Enter a number between 1 and 5:" ));
+            if (num < 1 || num > 5) {
+                alert("Invalid");
+                continue;
+            }
+            chance++;
+            var number = "";
+            switch(num) {
+                case 1:
+                    number="One";
+                    break;
+                case 2:
+                    number="Two";
+                    break;
+                case 3:
+                    number="Three";
+                    break;
+                case 4:
+                    number="Four";
+                    break;
+                case 5:
+                    number="Five";
+                    break;
+            }
+            document.write("You Entered : " + number + "<br>" );
+            if(num==3){
+                document.write("You Guessed it right!<br>");
+                break;
+            }
+            else
+            {
+                document.write("Wrong Guess. Try Again <br>");
+            }
+        }
+        if(chance==5 && num!==3) 
+        {
+            document.write("Game Over");
+        }
+
+    </script>
+</body>
+</html>
