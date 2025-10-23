@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+ </head>
+ <body>
+    <script>
+        let test_Comment = "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.";
+        console.log(filter_Comment(test_Comment));
+        function filter_Comment(comment) {
+            let cleaned_Comment = comment.replace(/\b(bad|ugly|stupid)\b/gi, "*");
+            let number_Count = (comment.match(/\d+/g) || []).length;
+            let capitalized_Words = (comment.match(/\b[A-Z][a-zA-Z]*/g) || []).length;
+            return `Cleaned Comment: ${cleaned_Comment}\n Numbers Mentioned: ${number_Count}\n Capitalized Words: ${capitalized_Words}`;
+        }
+    </script>
+ </body>
+ </html>
