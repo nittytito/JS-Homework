@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+</head>
+<body>
+    <h1>Profile</h1>
+    <p id="user"></p>
+    <p id="myuser"></p>
+    <script>
+        class User{
+            constructor(name,age,email){
+                this.name=name;
+                this.age=age;
+                this.email=email;
+            }
+
+            getName(){
+                return this.name;
+            }
+            getAge(){
+                return this.age;
+            }
+            setEmail(newEmail){
+                this.email=newEmail;
+                if(newEmail.indexOf("@")!==-1){
+                    return "Successfully";
+                }
+                else{
+                    return "Invalid";
+                }
+            }
+            getDisplay(){
+                return "Name:"+this.name+"<br>Age:"+this.age+"<br>Email:"+this.email;
+            }
+        }
+    
+        var myUser=new User("Nitty Tito",23,"nittygmail.com");
+        document.getElementById("user").innerHTML=myUser.getDisplay();
+        myEmail=myUser.setEmail("nitty@gmail.com");
+        document.getElementById("myuser").innerHTML=myUser.getDisplay();
+    </script>
+</body>
+</html>
+
+
