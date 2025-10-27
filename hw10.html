@@ -13,7 +13,7 @@
             "message":"Thank you for your Response"
         }`
         var convert=JSON.parse(person);
-        var display = () => {
+        var display = () =>{
             try{
                 var feedback = convert.message.toLowerCase();
                 if(/thank/i.test(feedback)){
